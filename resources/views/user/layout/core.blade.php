@@ -25,12 +25,12 @@
       </div> -->
       <!-- loader END -->
       <!-- Wrapper Start -->
-      <div class="iq-sidebar">
+      <div class="iq-sidebar bg-info">
             <div class="iq-sidebar-logo d-flex justify-content-between">
                <a href="/" class="header-logo">
                   <img src="asset('user')/images/logo.png" class="img-fluid rounded-normal" alt="">
                   <div class="logo-title">
-                     <span class="text-danger text-uppercase">gelombang</span>
+                     <span class="text-white text-uppercase">gelombang</span>
                   </div>
                </a>
                <div class="iq-menu-bt-sidebar">
@@ -51,7 +51,7 @@
                     </li>
                     
                      <li>
-                        <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><span>Peramalan</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><span>Prediksi</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
                            <li><a href="#">HTS Lee</a></li>
                            <li><a href="#">HOFTS</a></li>
@@ -67,7 +67,7 @@
             </div>
          </div>
          <!-- TOP Nav Bar -->
-         <div class="iq-top-navbar">
+         <div class="iq-top-navbar bg-info">
             <div class="iq-navbar-custom">
                <nav class="navbar navbar-expand-lg navbar-light p-0">
                   
@@ -103,8 +103,17 @@
                                 
                                  
                                  <div class="d-inline-block w-100 text-center p-3">
-                                    <a class="bg-primary iq-sign-btn" href="sign-in.html" role="button">Keluar<i class="ri-login-box-line ml-2"></i></a>
-                                 </div>
+                                    <!-- <a class="bg-primary iq-sign-btn" href="sign-in.html" role="button">Keluar<i class="ri-login-box-line ml-2"></i></a> -->
+                                   
+                                    <a class="bg-primary iq-sign-btn" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                               </div>
                            </div>
                         </div>
@@ -121,7 +130,7 @@
             <div class="row">
               
                <div class="col-lg-6 text-right">
-                  Copyright 2020 <a href="#">Server360</a> All Rights Reserved.
+                  @<a href="#">2023</a> M. Romy Andhika
                </div>
             </div>
          </div>

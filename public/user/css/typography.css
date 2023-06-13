@@ -393,7 +393,7 @@ Buttons
 .btn-success { background-color: var(--iq-success); border-color: var(--iq-success); }
 .btn-danger { background-color: var(--iq-danger); border-color: var(--iq-danger); }
 .btn-warning { background-color: var(--iq-warning); border-color: var(--iq-warning); }
-.btn-info { background-color: var(--iq-info); border-color: var(--iq-info); }
+.btn-info { background-color: #3e8bb3; border-color: #3e8bb3; }
 .btn-light { background-color: var(--iq-light); border-color: var(--iq-light); }
 .btn-dark { background-color: var(--iq-dark); border-color: var(--iq-dark); }
 .btn-white { background-color: var(--iq-white); border-color: var(--iq-white); }

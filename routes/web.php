@@ -29,3 +29,4 @@ Route::put('/user/gelombang/{gelombang}', [GelombangController::class, 'update']
 Route::get('/user/gelombang/{gelombang}/hapus', [GelombangController::class, 'destroy'])->name('user.gelombang.destroy');
 Route::get('/coba', [GelombangController::class, 'coba']);
 Route::post('/file/upload', [GelombangController::class, 'uploadfile']);
+Route::get('/search', [GelombangController::class, 'cari']);

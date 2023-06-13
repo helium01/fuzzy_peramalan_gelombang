@@ -9,19 +9,27 @@
          <div id="content-page" class="content-page">
             <div class="container-fluid">
                   <div class="col-lg-12">
+                     <h2 class="text-center">Data Ketinggian Gelombang Laut Natuna Utara</h2>
+                  <div class="row mt-3">
+                  <div class="col-lg-12">
                   <div class="row">
-                  <div class="col-lg-4">
-                     <div class="row">
-                        <div class="col">
-                           <a class="btn btn-primary" href="/user/gelombang/create" role="button">Tambah Data</a>
-                        </div>
-                        <div class="col">
-                           <a class="btn btn-primary" href="/upload/file" role="button">Upload Data </a>
-                        </div>
+                     <div class="col">
+                        <a class="btn btn-primary" href="/user/gelombang/create" role="button">Tambah Data</a>
+                     </div>
+                     <div class="col">
+                        <a class="btn btn-primary" href="/upload/file" role="button">Upload Data</a>
+                     </div>
+                     <div class="col offside-4">
+                        <form class="form-inline" action="/search" method="GET">
+                           <input class="form-control" type="date" name="search" placeholder="Cari..." aria-label="Cari">
+                           <button class="btn btn-primary" type="submit">Cari</button>
+                        </form>
+                     </div>
+                  </div>
                      </div>
                   </div>
                   </div>
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height mt-3">
   
                         <div class="iq-card-body">
                            <div class="table-responsive">

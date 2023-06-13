@@ -8,10 +8,22 @@ use App\Imports\gelombangImport;
 
 class GelombangController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(Request $request)
     {
         $entries = $request->get('entries', 10);
         $gelombangs = Gelombang::simplePaginate($entries);
+        $gelombang = Gelombang::all();
+        return view('user.gelombang.index', compact('gelombangs','gelombang'));
+    }
+    public function cari(Request $request)
+    {
+        $entries = $request->get('entries', 10);
+        $gelombangs = Gelombang::where('tanggal','LIKE','%'.$request->search.'%')->simplePaginate($entries);
         $gelombang = Gelombang::all();
         return view('user.gelombang.index', compact('gelombangs','gelombang'));
     }
@@ -25,7 +37,7 @@ class GelombangController extends Controller
     {
         $validatedData = $request->validate([
             'tanggal' => 'required|date',
-            'tinggi_gelombang' => 'required|integer',
+            'tinggi_gelombang' => 'required',
         ]);
 
         Gelombang::create($validatedData);
@@ -274,7 +286,7 @@ foreach ($prediksi as $data) {
     $hasil_prediksi_pe[] = [
         'tanggal' => $tanggal,
         'pe' => $pe,
-    ];
+    ];  
 }
             }
             
