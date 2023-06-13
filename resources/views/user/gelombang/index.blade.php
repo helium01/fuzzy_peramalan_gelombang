@@ -57,7 +57,7 @@
                                     @foreach($gelombangs as $index=>$gelombang)
                                     <tr>
                                        <td>
-                                          {{$index+1}}
+                                       {{ $gelombangs->currentPage() * $gelombangs->perPage() - $gelombangs->perPage() + $loop->iteration }}
                                        </td>
                                        <td>
                                           {{$gelombang->tanggal}}
@@ -73,7 +73,7 @@
                                     </tr>
                                  </tbody>
                               </table>
-                                    {{ $gelombangs->links() }}
+                                    {{ $gelombangs->withQueryString()->onEachSide(5)->links() }}
                            </div>
                         </div>
                      </div>
