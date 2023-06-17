@@ -53,9 +53,9 @@
                      <li>
                         <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><span>Prediksi</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
-                           <li><a href="#">HTS Lee</a></li>
-                           <li><a href="#">HOFTS</a></li>
-                           <li><a href="#">Grafik Perbandingan</a></li>
+                           <li><a href="/peramalan/hotimeseries">HOFTS</a></li>
+                           <li><a href="/peramalan/timeserieslee">HTS Lee</a></li>
+                           <li><a href="/peramalan/grafik">Grafik Perbandingan</a></li>
                          
                         </ul>
                      </li>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GelombangController;
+use App\Http\Controllers\HoTimeseriesController;
+use App\Http\Controllers\TimeSeriesleeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,7 @@ Route::get('/user/gelombang/{gelombang}/hapus', [GelombangController::class, 'de
 Route::get('/coba', [GelombangController::class, 'coba']);
 Route::post('/file/upload', [GelombangController::class, 'uploadfile']);
 Route::get('/search', [GelombangController::class, 'cari']);
+Route::get('/peramalan/hotimeseries', [HoTimeseriesController::class, 'index']);
+Route::get('/peramalan/timeserieslee', [TimeSeriesleeController::class, 'index']);
+Route::get('/peramalan/grafik', [TimeSeriesleeController::class, 'grafik']);
+Route::get('/peramalan/grafik/data', [TimeSeriesleeController::class, 'getDataGelombang']);

@@ -22,9 +22,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $gelombangs = Gelombang::all();
-        return view('user.gelombang.index', compact('gelombangs'));
+        $entries = $request->get('entries', 10);
+        $gelombangs = Gelombang::simplePaginate($entries);
+        $gelombang = Gelombang::all();
+        return view('user.gelombang.index', compact('gelombangs','gelombang'));
     }
 }
